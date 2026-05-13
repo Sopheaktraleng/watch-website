@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zinvo Watches</title>
-  <meta
-    name="description"
-    content="Luxury-inspired Zinvo watch showcase with featured arrivals, collections, and accessories."
-  />
+  <title>ZINVO Watches — Stand Out From The Crowd</title>
+  <meta name="description" content="Luxury-inspired ZINVO watch showcase. Discover the Blade, Jumbo, and exclusive collaboration timepieces featuring the unique 1-second-spin turbine." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
     <nav class="topbar" aria-label="Primary">
       <div class="topbar-group topbar-group-left">
         <a href="#arrivals" class="top-link">WATCHES</a>
@@ -19,26 +21,24 @@
         <a href="#sunglasses" class="top-link">ACCESSORIES</a>
       </div>
 
-      <a href="#top" class="brand" aria-label="Zinvo home">
-        <span class="brand-mark" aria-hidden="true"></span>
+      <a href="#top" class="brand" aria-label="ZINVO home">
+        <img src="assets/images/zinvo-navbar-logo.svg" class="brand-svg" alt="ZINVO" />
         <span class="brand-text">ZINVO</span>
       </a>
 
       <div class="topbar-group topbar-group-right">
         <a href="#newsletter" class="top-link">LOG IN</a>
-        <a href="#newsletter" class="top-link">CART</a>
+        <a href="#newsletter" class="top-link icon-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          CART
+        </a>
       </div>
 
-      <button
-        id="menu-toggle"
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Toggle menu"
-      >
-        <span></span>
-        <span></span>
+      <button id="menu-toggle" class="menu-toggle" type="button"
+        aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
     </nav>
 
@@ -52,130 +52,125 @@
   </header>
 
   <main id="top">
+
+    <!-- ═══ HERO ═══ -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-stage">
-        <img
-          class="hero-visual"
-          src="assets/images/blade-12k.webp"
-          alt="Three Zinvo turbine watches"
-        />
+      <div class="hero-bg">
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/images/blade-12k.webp">
+          <source src="assets/images/poster.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
       </div>
-      <a href="#arrivals" id="hero-title" class="hero-shop-link">Shop Now</a>
+
+      <div class="hero-content">
+        <div class="hero-stage">
+          <img class="hero-visual" src="assets/images/blade-12k.webp" alt="ZINVO Blade 12K watch" id="hero-title" />
+        </div>
+        <div class="hero-foot">
+          <p class="hero-tagline">Discover the new releases. Stand out from the crowd.</p>
+          <a href="#arrivals" class="hero-shop-link">
+            <span>Shop Now</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
     </section>
 
- Stand out from the crowd.</p>
+    <!-- ═══ NEW ARRIVALS ═══ -->
+    <section id="arrivals" class="arrivals" aria-labelledby="arrivals-title">
+      <div class="arrivals-head reveal">
+        <h2 id="arrivals-title" class="arrivals-title">New <em>Arrivals</em></h2>
+        <p class="arrivals-subtitle">Discover the new releases. Stand out from the crowd.</p>
       </div>
 
       <div class="arrivals-rail">
-        <article class="arrival-card">
-          <img
-            class="arrival-image"
-            src="assets/images/showcase-sunglasses-2.webp"
-            alt="Jumbo Spirit watch"
-          />
+        <article class="arrival-card reveal">
+          <a href="#jumbo-feature" class="arrival-image-wrap">
+            <img class="arrival-image" src="assets/images/jumbo-spirit.webp" alt="Jumbo Spirit watch" loading="lazy" />
+            <div class="arrival-hover-overlay">
+              <span>View Timepiece →</span>
+            </div>
+          </a>
           <div class="arrival-copy">
             <h3 class="arrival-name">Jumbo <em>Spirit</em></h3>
-            <p class="arrival-description">
-              The newest evolution of the Jumbo pushes exquisite elegance into sophistication,
-              capturing the essence of modern luxury.
-            </p>
+            <p class="arrival-description">The newest evolution of the Jumbo pushes exquisite elegance into sophistication, capturing the essence of modern luxury.</p>
             <a href="#jumbo-feature" class="arrival-link">
-              <span class="arrival-arrow" aria-hidden="true">&rarr;</span>
+              <span class="arrival-arrow">→</span>
               <span>View Timepiece</span>
             </a>
           </div>
         </article>
 
-        <article class="arrival-card">
-          <img
-            class="arrival-image"
-            src="assets/images/showcase-sunglasses-3.webp"
-            alt="Jumbo Stealth watch"
-          />
+        <article class="arrival-card reveal">
+          <a href="#jumbo-feature" class="arrival-image-wrap">
+            <img class="arrival-image" src="assets/images/jumbo-stealth.webp" alt="Jumbo Stealth watch" loading="lazy" />
+            <div class="arrival-hover-overlay"><span>View Timepiece →</span></div>
+          </a>
           <div class="arrival-copy">
             <h3 class="arrival-name">Jumbo <em>Stealth</em></h3>
-            <p class="arrival-description">
-              Featuring the custom in-house 42-caliber automatic movement, this model marks
-              ZINVO&#39;s decade of innovation and style. Stand out.
-            </p>
+            <p class="arrival-description">Featuring the custom in-house 42-caliber automatic movement, this model marks ZINVO's decade of innovation and style. Stand out.</p>
             <a href="#jumbo-feature" class="arrival-link">
-              <span class="arrival-arrow" aria-hidden="true">&rarr;</span>
+              <span class="arrival-arrow">→</span>
               <span>View Timepiece</span>
             </a>
           </div>
         </article>
 
-        <article class="arrival-card">
-          <img
-            class="arrival-image"
-            src="assets/images/blade-12k.webp"
-            alt="Blade 12K watch"
-          />
+        <article class="arrival-card reveal">
+          <a href="#blade-feature" class="arrival-image-wrap">
+            <img class="arrival-image" src="assets/images/blade-12k.webp" alt="Blade 12K watch" loading="lazy" />
+            <div class="arrival-hover-overlay"><span>View Timepiece →</span></div>
+          </a>
           <div class="arrival-copy">
             <h3 class="arrival-name">Blade <em>12K</em></h3>
-            <p class="arrival-description">
-              Showcasing the evolution of the best-selling Blade design, this timepiece features
-              a yellow gold-plated case and bezel.
-            </p>
+            <p class="arrival-description">Showcasing the evolution of the best-selling Blade design, this timepiece features a yellow gold-plated case and bezel.</p>
             <a href="#blade-feature" class="arrival-link">
-              <span class="arrival-arrow" aria-hidden="true">&rarr;</span>
+              <span class="arrival-arrow">→</span>
               <span>View Timepiece</span>
             </a>
           </div>
         </article>
 
-        <article class="arrival-card">
-          <img
-            class="arrival-image"
-            src="assets/images/blade-corsa.webp"
-            alt="Blade Spirit watch"
-          />
+        <article class="arrival-card reveal">
+          <a href="#blade-feature" class="arrival-image-wrap">
+            <img class="arrival-image" src="assets/images/blade-corsa.webp" alt="Blade Spirit watch" loading="lazy" />
+            <div class="arrival-hover-overlay"><span>View Timepiece →</span></div>
+          </a>
           <div class="arrival-copy">
             <h3 class="arrival-name">Blade <em>Spirit</em></h3>
-            <p class="arrival-description">
-              Embracing the fusion of matte black with rose gold elements, this timepiece becomes
-              a perfect everyday watch.
-            </p>
+            <p class="arrival-description">Embracing the fusion of matte black with rose gold elements, this timepiece becomes a perfect everyday watch.</p>
             <a href="#blade-feature" class="arrival-link">
-              <span class="arrival-arrow" aria-hidden="true">&rarr;</span>
+              <span class="arrival-arrow">→</span>
               <span>View Timepiece</span>
             </a>
           </div>
         </article>
 
-        <article class="arrival-card">
-          <img
-            class="arrival-image"
-            src="assets/images/showcase-sunglasses-1.webp"
-            alt="Blade Cobalt watch"
-          />
+        <article class="arrival-card reveal">
+          <a href="#blade-feature" class="arrival-image-wrap">
+            <img class="arrival-image" src="assets/images/blade-cobalt.webp" alt="Blade Cobalt watch" loading="lazy" />
+            <div class="arrival-hover-overlay"><span>View Timepiece →</span></div>
+          </a>
           <div class="arrival-copy">
             <h3 class="arrival-name">Blade <em>Cobalt</em></h3>
-            <p class="arrival-description">
-              The ever-evolving timepiece with stainless steel case and blue plated bezel seamlessly
-              integrates with the unique turbine dial.
-            </p>
+            <p class="arrival-description">The ever-evolving timepiece with stainless steel case and blue plated bezel seamlessly integrates with the unique turbine dial.</p>
             <a href="#blade-feature" class="arrival-link">
-              <span class="arrival-arrow" aria-hidden="true">&rarr;</span>
+              <span class="arrival-arrow">→</span>
               <span>View Timepiece</span>
             </a>
           </div>
         </article>
 
-        <article class="arrival-card">
-          <img
-            class="arrival-image"
-            src="assets/images/blade-spirit.webp"
-            alt="Blade Corsa watch"
-          />
+        <article class="arrival-card reveal">
+          <a href="#blade-feature" class="arrival-image-wrap">
+            <img class="arrival-image" src="assets/images/blade-spirit.webp" alt="Blade Corsa watch" loading="lazy" />
+            <div class="arrival-hover-overlay"><span>View Timepiece →</span></div>
+          </a>
           <div class="arrival-copy">
             <h3 class="arrival-name">Blade <em>Corsa</em></h3>
-            <p class="arrival-description">
-              Characterized by a striking sports colorway, the Corsa amplifies the Blade silhouette
-              with sharper, more aggressive energy.
-            </p>
+            <p class="arrival-description">Characterized by a striking sports colorway, the Corsa amplifies the Blade silhouette with sharper, more aggressive energy.</p>
             <a href="#blade-feature" class="arrival-link">
-              <span class="arrival-arrow" aria-hidden="true">&rarr;</span>
+              <span class="arrival-arrow">→</span>
               <span>View Timepiece</span>
             </a>
           </div>
@@ -183,147 +178,119 @@
       </div>
     </section>
 
+    <!-- ═══ BLADE FEATURE ═══ -->
     <section id="blade-feature" class="feature-panel feature-panel-blade" aria-labelledby="blade-title">
-            <div class="feature-jumbo-media">
-      </div>
-      <div class="feature-copy feature-copy-overlay">
-        <h2 id="blade-title" class="feature-title">Blade - 45MM</h2>
-        <p class="feature-text">
-          One of a kind timepiece with the unique 1-second-spin turbine. Powered by the
-          automatic movement and featuring the 44mm stainless steel case, the BLADE is
-          different from any other watch.
-        </p>
+      <div class="feature-copy feature-copy-overlay reveal">
+        <p class="feature-eyebrow">Collection</p>
+        <h2 id="blade-title" class="feature-title">Blade — 45MM</h2>
+        <p class="feature-text">One of a kind timepiece with the unique 1-second-spin turbine. Powered by the automatic movement and featuring the 44mm stainless steel case, the BLADE is different from any other watch.</p>
         <p class="feature-highlight">Stand out from the crowd.</p>
         <a href="#arrivals" class="feature-button">Explore Collection</a>
-        
       </div>
-          <img
-          class="feature-jumbo-image"
-          src="assets/images/showcase-sunglasses-2.webp"
-          alt="Jumbo watch feature image"
-        />
     </section>
 
+    <!-- ═══ JUMBO FEATURE ═══ -->
     <section id="jumbo-feature" class="feature-panel feature-panel-jumbo" aria-labelledby="jumbo-title">
       <div class="feature-jumbo-media">
-        <img
-          class="feature-jumbo-image"
-          src="assets/images/gallery-1.webp"
-          alt="Jumbo watch feature image"
-        />
+        <img class="feature-jumbo-image" src="assets/images/gallery-1.webp" alt="Jumbo watch feature" loading="lazy" />
       </div>
-
-      <div class="feature-copy feature-copy-side">
-        <h2 id="jumbo-title" class="feature-title">Jumbo - 44MM</h2>
-        <p class="feature-text">
-          One of a kind timepiece with the unique 1-second-spin turbine. Powered by the
-          automatic movement and featuring the 44mm stainless steel case, the Jumbo is
-          different from any other watch.
-        </p>
+      <div class="feature-copy feature-copy-side reveal">
+        <p class="feature-eyebrow">Collection</p>
+        <h2 id="jumbo-title" class="feature-title">Jumbo — 44MM</h2>
+        <p class="feature-text">One of a kind timepiece with the unique 1-second-spin turbine. Powered by the automatic movement and featuring the 44mm stainless steel case, the Jumbo is different from any other watch.</p>
         <p class="feature-highlight">Stand out from the crowd.</p>
         <a href="#arrivals" class="feature-button">Explore Collection</a>
       </div>
     </section>
 
+    <!-- ═══ COLLAB ═══ -->
     <section class="collab-panel" aria-labelledby="collab-title">
       <div class="collab-media">
-        <img
-          class="collab-image"
-          src="assets/images/showcase-collab-1.webp"
-          alt="Zinvo collaboration with Dodge"
-        />
+        <img class="collab-image" src="assets/images/showcase-collab-1.webp" alt="ZINVO x Dodge collaboration" loading="lazy" />
       </div>
-
-      <div class="collab-copy">
+      <div class="collab-copy reveal">
+        <p class="feature-eyebrow">Limited Edition</p>
         <h2 id="collab-title" class="collab-title">ZINVO x <em>DODGE</em></h2>
         <p class="collab-product">BLADE HELLCAT</p>
-        <p class="collab-text">
-          This collaboration is an exclusive ZINVO x DODGE timepiece that is limited to 500 pieces
-          worldwide, featuring many design references from Dodge Challenger SRT Hellcat, including
-          the same leather as the vehicle&#39;s interior, the same seatbelt webbing, and many more.
-        </p>
+        <p class="collab-text">This collaboration is an exclusive ZINVO x DODGE timepiece that is limited to 500 pieces worldwide, featuring many design references from Dodge Challenger SRT Hellcat, including the same leather as the vehicle's interior, the same seatbelt webbing, and many more.</p>
         <a href="#arrivals" class="feature-button">Explore Collection</a>
       </div>
     </section>
 
+    <!-- ═══ SUNGLASSES ═══ -->
     <section id="sunglasses" class="sunglasses-section" aria-labelledby="sunglasses-title">
-      <div class="sunglasses-copy">
-        <h2 id="sunglasses-title" class="sunglasses-title">The - <em>Sunglasses</em></h2>
-        <p class="sunglasses-text">
-          Discover the range of our sunglasses. Releasing occasionally in limited editions.
-        </p>
+      <div class="sunglasses-copy reveal">
+        <p class="feature-eyebrow">Eyewear</p>
+        <h2 id="sunglasses-title" class="sunglasses-title">The — <em>Sunglasses</em></h2>
+        <p class="sunglasses-text">Discover the range of our sunglasses. Releasing occasionally in limited editions.</p>
         <a href="#newsletter" class="feature-button">Explore Collection</a>
       </div>
-
       <div class="sunglasses-grid">
-        <img src="assets/images/gallery-3.png" alt="Green Zinvo sunglasses" />
-        <img src="assets/images/gallery-3.png" alt="Clear Zinvo sunglasses" />
-        <img src="assets/images/gallery-4.png" alt="Black Zinvo sunglasses" />
+        <img src="assets/images/showcase-sunglasses-1.webp" alt="ZINVO sunglasses green" loading="lazy" />
+        <img src="assets/images/showcase-sunglasses-2.webp" alt="ZINVO sunglasses clear" loading="lazy" />
+        <img src="assets/images/showcase-sunglasses-3.webp" alt="ZINVO sunglasses dark" loading="lazy" />
       </div>
     </section>
 
+    <!-- ═══ PROMISE ═══ -->
     <section class="promise-section" aria-labelledby="promise-title">
-      <h2 id="promise-title" class="promise-title">Our Promise to You</h2>
+      <h2 id="promise-title" class="promise-title reveal"><em>Our Promise</em> to You</h2>
 
       <div class="promise-grid">
-        <article class="promise-card">
-          <img src="assets/images/gallery-5.jpg" alt="" class="promise-icon" />
+        <article class="promise-card reveal">
+          <div class="promise-icon-wrap">
+            <img src="assets/images/shield.svg" alt="" class="promise-icon" aria-hidden="true" onerror="this.style.display='none';this.parentElement.innerHTML='🛡️';" />
+          </div>
           <h3 class="promise-heading">Two Year Warranty</h3>
-          <p class="promise-text">
-            All of ZINVO products come with international warranty for the term of 2 years.
-            Learn more about our warranty here.
-          </p>
+          <p class="promise-text">All of ZINVO products come with international warranty for the term of 2 years. Learn more about our warranty <a href="#newsletter" class="promise-link">here</a>.</p>
         </article>
 
-        <article class="promise-card">
-          <img src="assets/images/gallery-5.jpg" alt="" class="promise-icon" />
+        <article class="promise-card reveal">
+          <div class="promise-icon-wrap">
+            <img src="assets/images/diamond.svg" alt="" class="promise-icon" aria-hidden="true" onerror="this.style.display='none';this.parentElement.innerHTML='💎';" />
+          </div>
           <h3 class="promise-heading">High-End Quality</h3>
-          <p class="promise-text">
-            Blending precision, craftsmanship, and timeless elegance with trendy designs
-            and innovative features.
-          </p>
+          <p class="promise-text">Blending precision, craftsmanship, and timeless elegance with trendy designs and innovative features.</p>
         </article>
 
-        <article class="promise-card">
-          <img src="assets/images/gallery-7.jpg" alt="" class="promise-icon" />
+        <article class="promise-card reveal">
+          <div class="promise-icon-wrap">
+            <img src="assets/images/plane.svg" alt="" class="promise-icon" aria-hidden="true" onerror="this.style.display='none';this.parentElement.innerHTML='✈️';" />
+          </div>
           <h3 class="promise-heading">Free Shipping Globally</h3>
-          <p class="promise-text">
-            Worldwide shipping with a secure, tracked shipping method for the fast and reliable
-            delivery. Free standard shipping on all orders.
-          </p>
+          <p class="promise-text">Worldwide shipping with a secure, tracked shipping method for the fast &amp; reliable delivery. Free standard shipping on all orders.</p>
         </article>
       </div>
 
-      <div class="gallery-grid">
-        <img src="assets/images/blade-cobalt.webp" alt="Blade Cobalt watch" />
-        <img src="assets/images/showcase-sunglasses-2.webp" alt="Clear sunglasses" />
-        <img src="assets/images/gallery-1.webp" alt="Green and blue Zinvo watches" />
-        <img src="assets/images/gallery-6.png" alt="Watch glass detail" />
-        <img src="assets/images/gallery-5.jpg" alt="Green watch detail" />
-        <img src="assets/images/gallery-3.png" alt="Mechanical watch movement" />
-        <img src="assets/images/gallery-4.png" alt="Green Zinvo strap detail" />
-        <img src="assets/images/blade-12k.webp" alt="Blade 12K watch" />
-        <img src="assets/images/showcase-sunglasses-1.webp" alt="Green sunglasses" />
+      <div class="gallery-grid reveal">
+        <img src="assets/images/blade-cobalt.webp" alt="Blade Cobalt watch" loading="lazy" />
+        <img src="assets/images/showcase-sunglasses-2.webp" alt="Clear sunglasses" loading="lazy" />
+        <img src="assets/images/gallery-1.webp" alt="ZINVO watches" loading="lazy" />
+        <img src="assets/images/gallery-6.png" alt="Watch glass detail" loading="lazy" />
+        <img src="assets/images/gallery-5.jpg" alt="Green watch detail" loading="lazy" />
+        <img src="assets/images/gallery-3.png" alt="Mechanical watch movement" loading="lazy" />
+        <img src="assets/images/gallery-4.png" alt="ZINVO strap detail" loading="lazy" />
+        <img src="assets/images/blade-12k.webp" alt="Blade 12K watch" loading="lazy" />
+        <img src="assets/images/showcase-sunglasses-1.webp" alt="Green sunglasses" loading="lazy" />
       </div>
     </section>
 
+    <!-- ═══ NEWSLETTER + FOOTER ═══ -->
     <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-title">
-      <div class="newsletter-head">
+      <div class="newsletter-head reveal">
         <h2 id="newsletter-title" class="newsletter-title">Get the <em>Latest News</em></h2>
-        <p class="newsletter-subtitle">
-          Be the first to receive the latest news on our brand, products and upcoming events.
-        </p>
+        <p class="newsletter-subtitle">Be the first to receive the latest news on our brand, products and upcoming events.</p>
       </div>
 
-      <form class="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="Email Address" aria-label="Email Address" />
+      <form class="newsletter-form reveal" novalidate>
+        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Email Address" aria-label="Email Address" />
         <button type="submit" class="newsletter-button">Subscribe</button>
       </form>
 
       <div class="footer-grid">
         <div class="footer-column footer-brand-column">
           <div class="footer-logo">
-            <span class="brand-mark" aria-hidden="true"></span>
+            <img src="assets/images/zinvo-navbar-logo.svg" class="footer-logo-svg" alt="ZINVO" />
             <span class="footer-logo-text">ZINVO</span>
           </div>
           <a href="mailto:info@zinvowatches.com" class="footer-link">info@zinvowatches.com</a>
@@ -350,7 +317,12 @@
           <a href="#newsletter" class="footer-link">Careers</a>
         </div>
       </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2024 ZINVO Watches. All rights reserved.</p>
+      </div>
     </section>
+
   </main>
 
   <script src="js/script.js"></script>
