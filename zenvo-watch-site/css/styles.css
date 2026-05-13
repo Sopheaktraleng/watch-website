@@ -148,12 +148,12 @@ button, input { font: inherit; }
 /* ═══ HERO ═══ */
 .hero {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  width: 100%;
   min-height: 100vh;
-  padding-bottom: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
   overflow: hidden;
 }
 .hero-bg {
@@ -161,73 +161,40 @@ button, input { font: inherit; }
   inset: 0;
   z-index: 0;
 }
-.hero-video {
-  width: 100%; height: 100%;
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.45;
+  object-position: center 40%;
+  animation: heroZoom 16s ease-in-out infinite alternate;
+}
+@keyframes heroZoom {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.06); }
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(80,80,120,0.22), transparent 70%),
-    linear-gradient(180deg,
-      rgba(0,0,0,0.1) 0%,
-      rgba(0,0,0,0.05) 30%,
-      rgba(0,0,0,0.6) 72%,
-      rgba(0,0,0,0.96) 100%);
-}
-.hero-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: var(--nav-h);
-}
-.hero-stage {
-  display: grid;
-  place-items: center;
-  flex: 1;
-  width: 100%;
-  padding: 40px 0 20px;
-}
-.hero-visual {
-  width: min(68vw, 1000px);
-  object-fit: contain;
-  filter: drop-shadow(0 40px 100px rgba(0,0,0,0.7));
-  animation: heroFloat 6s ease-in-out infinite;
-}
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-.hero-foot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
-  padding: 0 20px;
-}
-.hero-tagline {
-  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
-  color: var(--muted);
-  letter-spacing: 0.06em;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.18) 0%,
+    rgba(0,0,0,0.0)  40%,
+    rgba(0,0,0,0.35) 80%,
+    rgba(0,0,0,0.65) 100%
+  );
 }
 .hero-shop-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 40px;
-  border: 1px solid rgba(255,255,255,0.35);
-  font-size: 0.85rem;
-  letter-spacing: 0.14em;
-  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  transition: border-color 0.25s, opacity 0.25s;
 }
 .hero-shop-link:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.7);
+  border-color: #fff;
+  opacity: 0.75;
 }
 
 /* ═══ ARRIVALS ═══ */
